@@ -37,4 +37,3 @@ inputs:
   appName: '<App Service Name>'
   package: '$(Build.ArtifactStagingDirectory)/drop'
 displayName: 'Deploy to Azure Web App'
-hhhh
