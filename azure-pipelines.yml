@@ -29,3 +29,11 @@ steps:
     artifact: 'drop'
     publishLocation: 'Pipeline'
   displayName: 'Publish artifacts'
+  script: npm run lint
+displayName: 'Run linter'
+task: AzureWebApp@1
+inputs:
+  azureSubscription: '<Azure Subscription>'
+  appName: '<App Service Name>'
+  package: '$(Build.ArtifactStagingDirectory)/drop'
+displayName: 'Deploy to Azure Web App'
